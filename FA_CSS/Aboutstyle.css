@@ -1,39 +1,59 @@
+:root {
+  --gold-crayola: #e6c15a;
+  --radius-6: 6px;
+  --fontSize-label-2: 14px;
+  --letterSpacing-5: 2px;
+  --transition-1: 0.3s ease;
+  --transition-2: 0.4s ease;
+  --radius-circle: 50%;
+  --smoky-black-1: #121212;
+  --gradient-2: linear-gradient(90deg, #bfa94f 0%, #f9ec79 100%);
+}
+
 /* Container for the about section */
 .container4 {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   padding-inline: 16px;
-  max-width: 1000px;
+  max-width: 1200px;      /* increase max width */
   margin: 0 auto;
-  gap: 30px; /* Added gap for spacing instead of margin-right/margin-left */
-  flex-wrap: wrap; /* Responsive wrap */
+  gap: 30px;
+  flex-wrap: nowrap;      /* Prevent image from dropping below */
 }
 
 /* Content styling */
 .about-content1 {
-  flex: 1 1 400px; /* Flexible with min width */
+  flex: 1;
   max-width: 50%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* ✅ Align vertically */
 }
+
 
 /* Image container styling */
 .about-banner1 {
-  flex: 1 1 400px;
+  flex: 1;
   max-width: 50%;
   position: relative;
   overflow: hidden;
-  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* ✅ Center image vertically */
+  padding-top: 20px;    /* ✅ Optional tweak if image still looks high */
 }
 
 /* Responsive image */
 .about-banner1 img {
-  width: 100%;
+  width: 110%;
   height: auto;
-  display: block;
+  object-fit: contain;
 }
 
-/* Absolute positioned images inside banner */
+
+/* Absolute positioned images inside banner (optional) */
 .abs-img1 {
   position: absolute;
 }
@@ -53,14 +73,14 @@
 
 /* Text styles */
 .section-text1 {
-  font-size: 13px;
+  font-size: 12px;
   line-height: 2em;
   margin-bottom: 12px;
   color: rgb(223, 227, 142);
 }
 
 .headline-1-cook {
-  font-size: 28px;
+  font-size: 25px;
   color: cornsilk;
   font-weight: bold;
   margin-bottom: 6px;
@@ -78,7 +98,7 @@
   margin-bottom: 6px;
   font-size: 12px;
   position: relative;
-  padding-bottom: 20px; /* To make room for separator */
+  padding-bottom: 20px; /* room for separator */
 }
 
 .section-subtitle1::after {
@@ -145,7 +165,7 @@
   bottom: -50%;
 }
 
-.btn1 .text1 {
+.btn1 .text-1 {
   transition: var(--transition-1);
 }
 
@@ -180,6 +200,7 @@
 @media (max-width: 768px) {
   .container4 {
     flex-direction: column;
+    flex-wrap: wrap;
     max-width: 90%;
   }
 
@@ -187,6 +208,7 @@
   .about-banner1 {
     max-width: 100%;
     flex: 1 1 100%;
+    text-align: center;
   }
 
   .section-text1 {

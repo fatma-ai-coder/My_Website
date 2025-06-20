@@ -8,57 +8,69 @@
     scroll-behavior: smooth;
 }
 
-header {
-    background-color: black;
-    width: 100%;
-    position: fixed;
-    z-index: 999;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 100px;
+
+.header {
+  background-color: black;
+  width: 100%;
+  padding: 10px 0; /* remove big horizontal padding */
+  box-sizing: border-box;
+  z-index: 999;
 }
 
+.header-container {
+  max-width: 1200px;  /* same as your CV max-width */
+  margin: 0 auto;     /* center it */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 120px;    /* small padding inside */
+}
+
+
+section {
+    padding: 80px 80px; /* smaller padding: top/bottom 40px, sides 20px */
+
+}
+
+/* Logo style */
 .logo {
-    text-decoration: none;
-    color: #FFE998;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 0.8em;
-    cursor: default;
+  text-decoration: none;
+  color: #FFE998;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.6em;
+  cursor: default;
 }
 
+/* Navigation links */
 .navigation a {
-    color: #FFE998;
-    text-decoration: none;
-    font-size: 0.8em;
-    font-weight: 500;
-    padding-left: 30px;
-    opacity: 0;
-    animation: slideTop 0.5s ease forwards;
+  color: #FFE998;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: 500;
+  padding-left: 30px;
+  opacity: 1;
 }
 
 .navigation a:hover {
-    color: gold;
-}
-
-section {
-    padding: 100px 150px;
+  color: gold;
 }
 
 .main1 {
+    padding: 40px 90px;
     width: 100%;
-    min-height: 80vh;
+    min-height: 70vh;
     display: flex;
     align-items: center;
     background: url(../Fimages/background10.jpeg) no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    
 }
 
 .main1 h2 {
-    color: #FFE998;
+    color:#8b23d6 ;
     font-size: 1.4em;
     font-weight: 500;
     margin-bottom: 10px;
@@ -88,7 +100,7 @@ section {
 
 .main-btn {
     color: black;
-    background-color: #FFE998;
+    background-color:  #FFE998;
     text-decoration: none;
     font-size: 0.8em;
     font-weight: 600;

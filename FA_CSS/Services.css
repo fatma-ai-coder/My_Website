@@ -10,6 +10,12 @@
   list-style-type: none;
   text-decoration: none;
 }
+:target::before {
+  content: "";
+  display: block;
+  height: 80px; /* height of your header */
+  margin-top: -80px;
+}
 
 :root {
   --primary: #ec994b;
@@ -69,6 +75,12 @@ html {
   margin: 0 auto;
 }
 
+.container1 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
 /* Text alignment helper */
 .text-center {
   text-align: center;
@@ -81,10 +93,19 @@ html {
   padding: 2rem 0;
 }
 
-/* Trending Section */
-#tranding {
-  padding: 4rem 0;
+.section-subheading {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #555;
 }
+
+/* Trending Section */
+
+#tranding {
+  padding: 60px 50px;
+}
+
 
 @media (max-width: 1440px) {
   #tranding {
@@ -108,8 +129,11 @@ html {
 /* Single Trending Slide */
 .tranding-slide {
   width: 30rem;
-  height: 35rem;
+  height: 34rem;
   position: relative;
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 500px) {
@@ -117,6 +141,7 @@ html {
     width: 25rem !important;
     height: 30rem !important;
   }
+
   .tranding-slide .tranding-slide-img img {
     width: 25rem !important;
     height: 30rem !important;
@@ -125,52 +150,37 @@ html {
 
 /* Slide image */
 .tranding-slide .tranding-slide-img img {
-  width: 25rem;
-  height: 30rem;
+  width: 100%;
+  height: 100%;
   border-radius: 2rem;
   object-fit: cover;
 }
 
-/* Slide content container */
+/* Slide content */
 .tranding-slide .tranding-slide-content {
   position: absolute;
-  inset: 0; /* shorthand for top, right, bottom, left = 0 */
+  bottom: 1rem; /* was 0 */
+  left: 1rem;
+  right: 1rem;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1.2rem;
+  color: white;
+  border-radius: 1rem;
 }
 
-/* Food price text */
-.tranding-slide-content .food-price {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  color: var(--white);
+
+.tranding-slide-content h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
-/* Bottom content */
-.tranding-slide-content .tranding-slide-content-bottom {
-  position: absolute;
-  bottom: 2rem;
-  left: 2rem;
-  color: var(--white);
+.tranding-slide-content p {
+  font-size: 1.4rem;
+  font-weight: 400;
 }
 
-/* Food rating */
-.food-rating {
-  padding-top: 1rem;
-  display: flex;
-  gap: 1rem;
-}
-
-.rating ion-icon {
-  color: var(--primary);
-}
-
-/* Remove swiper shadows */
-.swiper-slide-shadow-left,
-.swiper-slide-shadow-right {
-  display: none;
-}
-
-/* Slider controls container */
+/* Slider Navigation */
 .tranding-slider-control {
   position: relative;
   transform: translateY(-50%);
@@ -179,7 +189,6 @@ html {
   justify-content: center;
 }
 
-/* Next button position */
 .tranding-slider-control .swiper-button-next {
   left: 58% !important;
   transform: translateX(-58%) !important;
@@ -199,7 +208,6 @@ html {
   }
 }
 
-/* Prev button position */
 .tranding-slider-control .swiper-button-prev {
   left: 42% !important;
   transform: translateX(-42%) !important;
@@ -219,7 +227,6 @@ html {
   }
 }
 
-/* Slider arrow styling */
 .tranding-slider-control .slider-arrow {
   background: var(--white);
   width: 3.5rem;
@@ -233,18 +240,15 @@ html {
   top: 50%;
 }
 
-/* Slider arrow icons */
 .tranding-slider-control .slider-arrow ion-icon {
   font-size: 2rem;
   color: #222224;
 }
 
-/* Empty content for slider-arrow after pseudo-element */
 .tranding-slider-control .slider-arrow::after {
   content: '';
 }
 
-/* Pagination */
 .tranding-slider-control .swiper-pagination {
   position: relative;
   width: 15rem;
@@ -262,3 +266,10 @@ html {
 .tranding-slider-control .swiper-pagination .swiper-pagination-bullet-active {
   background: var(--primary);
 }
+
+/* Hide Swiper shadows */
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none;
+}
+

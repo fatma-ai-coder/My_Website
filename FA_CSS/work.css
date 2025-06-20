@@ -66,6 +66,10 @@ button {
   cursor: pointer;
 }
 
+.feature .section-title {
+  font-size: 2.5rem;
+}
+
 input {
   width: 100%;
   outline: none;
@@ -88,7 +92,7 @@ body {
   background-color: black;
   color: black;
   font-family: var(--fontFamily-noto_sans);
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   line-height: var(--lineHeight-4);
   overflow-y: overlay;
 }
@@ -151,7 +155,7 @@ body.nav-active {
 }
 
 .headline-3 {
-  font-size: var(--fontSize-2);
+  font-size: 1.95rem;
   line-height: var(--lineHeight-2);
 }
 
@@ -221,6 +225,7 @@ body.nav-active {
 }
 
 .section-text {
+  color:#60526c;
   font-size: var(--fontSize-3);
   margin-block-end: 70px;
 }
