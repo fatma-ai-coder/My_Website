@@ -333,3 +333,18 @@ section {
   }
 }
 
+@media (max-width: 450px) {
+  .main1 {
+    min-height: 100vh !important;
+    height: 100vh !important;
+    padding: 140px 15px 40px 15px !important; /* reduce side padding */
+    background-position: center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-attachment: scroll !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+}

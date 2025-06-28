@@ -230,12 +230,12 @@ text-shadow:
 
 @media (max-width: 768px) {
   header {
-    padding: 10px 20px !important; /* smaller horizontal padding */
+    padding: 10px 10px !important; /* smaller horizontal padding */
   }
 
   .navigation {
     display: flex !important;       /* arrange nav links in a row */
-    gap: 20px;                      /* spacing between links */
+    gap: 10px;                      /* spacing between links */
     flex-wrap: nowrap;              /* prevent wrapping */
     overflow-x: auto;               /* allow horizontal scroll if needed */
   }
@@ -247,7 +247,27 @@ text-shadow:
   }
   
   .logo1 {
-    font-size: 1.4em;
+    font-size: 1.2em;
+     white-space: nowrap;
   }
 }
+@media (max-width: 414px) {
+  .showcase .logo {
+    font-size: 1.1em;
+    line-height: 1.1em;
+  }
 
+  .showcase .text h2 {
+    font-size: 1.8em;
+  }
+
+  .showcase .text h3 {
+    font-size: 1.1em;
+  }
+
+  /* Optional: Adjust button size too */
+  .showcase .text a {
+    font-size: 0.9em;
+    padding: 8px 20px;
+  }
+}

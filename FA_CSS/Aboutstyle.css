@@ -53,23 +53,6 @@
 }
 
 
-/* Absolute positioned images inside banner (optional) */
-.abs-img1 {
-  position: absolute;
-}
-
-.abs-img-cok {
-  bottom: -40px;
-  left: -40px;
-  width: 120px;
-  padding-block: 15px;
-}
-
-.abs-img-cook {
-  top: -40px;
-  right: -40px;
-  width: 100px;
-}
 
 /* Text styles */
 .section-text1 {
