@@ -12,27 +12,26 @@
 .header {
   background-color: black;
   width: 100%;
-  padding: 10px 0; /* remove big horizontal padding */
+  padding: 10px 0; 
   box-sizing: border-box;
   z-index: 999;
 }
 
 .header-container {
-  max-width: 1200px;  /* same as your CV max-width */
-  margin: 0 auto;     /* center it */
+  max-width: 1200px; 
+  margin: 0 auto;     
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 120px;    /* small padding inside */
+  padding: 0 120px;    
 }
 
 
 section {
-    padding: 80px 80px; /* smaller padding: top/bottom 40px, sides 20px */
+    padding: 80px 80px; 
 
 }
 
-/* Logo style */
 .logo {
   text-decoration: none;
   color: #FFE998;
@@ -42,7 +41,7 @@ section {
   cursor: default;
 }
 
-/* Navigation links */
+
 .navigation a {
   color: #FFE998;
   text-decoration: none;
@@ -56,21 +55,32 @@ section {
   color: gold;
 }
 
+
+
 .main1 {
     padding: 40px 90px;
     width: 100%;
     min-height: 70vh;
     display: flex;
     align-items: center;
-    background: url(../Fimages/background10.jpeg) no-repeat;
+    background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.75) 0%,    
+    rgba(0, 0, 0, 0.35) 20%,    
+    rgba(0, 0, 0, 0.1) 40%,    
+    rgba(0, 0, 0, 0) 60%      
+    ),
+    url(../Fimages/background10.jpeg) no-repeat;
+
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.9);  
 }
 
+
 .main1 h2 {
-    color:#8b23d6 ;
+    color: #FFE998;
     font-size: 1.4em;
     font-weight: 500;
     margin-bottom: 10px;
@@ -245,3 +255,81 @@ section {
         opacity: 1;
     }
 }
+@media (max-width: 768px) {
+  .main1 {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 20px;
+     padding-top: 140px;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0)
+    ), 
+    url(../Fimages/background10.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+  }
+
+  .main1 h2,
+  .main1 h3,
+  .main1 h4 {
+    font-size: 1em;
+    line-height: 1.6;
+    padding: 0 10px;
+  }
+
+  .main-btn {
+    font-size: 1em;
+    margin: 20px auto;
+  }
+
+  .social-icons1 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .main1 img {
+    max-width: 80%;
+    height: auto;
+    margin-top: 20px;
+  }
+ 
+  .header-container {
+    flex-direction: row; /* force horizontal layout */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 10px;
+  }
+
+  .logo {
+    font-size: 1.2em;
+    flex: 1;
+    white-space: nowrap;
+  }
+
+  .navigation {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+
+  .navigation a {
+    font-size: 0.9em;
+    padding-left: 0;
+  }
+}
+

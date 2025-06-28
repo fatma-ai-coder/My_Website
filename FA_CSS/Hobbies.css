@@ -56,7 +56,16 @@ header {
   justify-content: center; /* Center horizontally */
   align-items: center;     /* Center vertically */
   background: #111;
-  color: #fff;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: white;
+text-shadow:
+  0px 0px 1px #000000,       /* subtle dark outline */
+  1px 1px 0 #FFE998,
+  2px 2px 0 #FFE998,
+  3px 3px 0 #FFE998,
+  4px 4px 0 #FFE998;
+
   z-index: 2;
   transition: 1.5s;
 }
@@ -100,6 +109,7 @@ header {
   height: 100%;
   background: var(--overlay-color);
   mix-blend-mode: overlay;
+  
 }
 
 .text {
@@ -131,43 +141,29 @@ header {
 .text a {
   display: inline-block;
   font-size: 1em;
-  background: black;
+  background: #FFE998;
   padding: 10px 30px;
   text-decoration: none;
-  color: white;
+  color:white;
   margin-top: 10px;
   text-transform: uppercase;
   letter-spacing: 2px;
   transition: 0.2s;
+  text-shadow:
+  0 0 2px #000000,         /* soft subtle black glow */
+  -1px 0 0 #000000,        /* thin left outline */
+  1px 0 0 #000000,         /* thin right outline */
+  0 -1px 0 #000000,        /* thin top outline */
+  0 1px 0 #000000,         /* thin bottom outline */
+  2px 2px 0 #FFE998,
+  3px 3px 0 #FFE998;
 }
 
 .text a:hover {
   letter-spacing: 6px;
 }
 
-.social {
-  position: absolute;
-  bottom: 20px;
-  z-index: 10;
-  display: flex;
-  justify-content: center;
-}
 
-.social li {
-  list-style: none;
-}
-
-.social li a {
-  display: inline-block;
-  filter: invert(1);
-  margin-right: 20px;
-  transform: scale(0.5);
-  transition: 0.5s;
-}
-
-.social li a:hover {
-  transform: scale(0.5) translateY(-15px);
-}
 
 .menu {
   position: absolute;
