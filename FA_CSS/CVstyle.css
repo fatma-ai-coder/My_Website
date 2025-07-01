@@ -348,16 +348,24 @@ p {
         display: block;
     }
 }
-
 @media (max-width: 1000px) {
-    .container {
-        margin: 10px;
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .interest ul {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .container {
+    grid-template-columns: 1fr; /* stack left and right side */
+    margin: 40px auto;
+    width: 90%;
+    padding: 0; /* Let inner sections handle padding */
+  }
+
+  .container .Left_Side,
+  .container .Right_Side {
+    padding: 30px 20px;
+  }
+
+  .interest ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
+
 
 @media (max-width: 600px) {
     .about .box {
@@ -374,33 +382,56 @@ p {
     }
 }
 @media (max-width: 768px) {
-  .header-container {
+    .header-container {
     display: flex;
-    flex-direction: row;      /* ensures horizontal layout */
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 10px 10px;
-    flex-wrap: nowrap;        /* prevents wrapping to the next line */
+    flex-wrap: nowrap;
+    gap: 10px;
   }
 
   .logo {
-    font-size: 1.2em;
+    font-size: 1.1em;
     white-space: nowrap;
-    flex-shrink: 0;
+    flex-shrink: 1; /* allow shrinking */
   }
 
   .navigation {
     display: flex;
-    gap: 10px;
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: flex-end;
-    flex-wrap: nowrap;        /* keeps links on one line */
+    gap: 8px;
+    flex-shrink: 1;
   }
 
   .navigation a {
-    font-size: 1em;
+    font-size: 0.95em;
     padding-left: 5px;
     white-space: nowrap;
   }
+  .gallery {
+  grid-template-columns: 1fr !important; /* one image per row */
+  grid-gap: 10px;
+  padding: 0 10px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+
 }
 
 
