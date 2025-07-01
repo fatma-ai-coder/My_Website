@@ -61,11 +61,10 @@ header {
   color: white;
 text-shadow:
   0px 0px 1px #000000,       /* subtle dark outline */
-  1px 1px 0 #FFE998,
-  2px 2px 0 #FFE998,
-  3px 3px 0 #FFE998,
-  4px 4px 0 #FFE998;
-
+  1px 1px 0 #000000,
+  2px 2px 0 #000000,
+  3px 3px 0 #000000,
+  4px 4px 0 #000000;
   z-index: 2;
   transition: 1.5s;
 }
@@ -87,6 +86,10 @@ text-shadow:
   text-transform: uppercase;
   cursor: pointer;
   background-color: transparent;
+}
+.showcase header .logo {
+  text-shadow: none !important;
+  color: white; /* or any color you want */
 }
 
 
@@ -129,6 +132,8 @@ text-shadow:
   font-size: 2em;
   font-weight: 700;
   line-height: 1.9em;
+  color: white;
+  text-shadow: none;
 }
 
 .text p {
@@ -141,7 +146,7 @@ text-shadow:
 .text a {
   display: inline-block;
   font-size: 1em;
-  background: #FFE998;
+  background: #000000;
   padding: 10px 30px;
   text-decoration: none;
   color:white;
@@ -149,14 +154,7 @@ text-shadow:
   text-transform: uppercase;
   letter-spacing: 2px;
   transition: 0.2s;
-  text-shadow:
-  0 0 2px #000000,         /* soft subtle black glow */
-  -1px 0 0 #000000,        /* thin left outline */
-  1px 0 0 #000000,         /* thin right outline */
-  0 -1px 0 #000000,        /* thin top outline */
-  0 1px 0 #000000,         /* thin bottom outline */
-  2px 2px 0 #FFE998,
-  3px 3px 0 #FFE998;
+  
 }
 
 .text a:hover {
